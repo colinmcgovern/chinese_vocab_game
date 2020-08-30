@@ -1,0 +1,47 @@
+<head>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+</head>
+
+<style>
+	body {
+	  color: white;
+	  font-family: Arial, Helvetica, sans-serif;
+	  margin:    0 auto;
+	  max-width: 900px;
+	  background-image: url("background.gif");
+	  background-repeat: repeat;
+	  image-rendering: pixelated;
+	  background-size: 256px 256px;
+	}
+
+	.main {
+
+		color: black;
+
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin-right: -50%;
+	    transform: translate(-50%, -50%);
+	    border-radius: 50px;
+
+	    background-color: rgba(255, 255, 255, .9);
+	}
+</style>
+
+<body>
+	<div class="main">
+		<br><br>
+		Time left: <span id="time">01:00</span><br>
+		Score: <span id="score">0</span><br>
+		High Score: <span id="high_score">0</span><br>
+
+		<canvas id="myCanvas" width="960" height="540"></canvas>
+	</div>
+	
+</body>
+
+
+
+<script src="client.js"></script>
