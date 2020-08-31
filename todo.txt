@@ -1,0 +1,3 @@
+-seperate keys on screen by which hand
+-answer history
+-new words, then failed words organized by time, then correct words organized by time, then random words
