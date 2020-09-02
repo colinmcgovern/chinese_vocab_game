@@ -4,5 +4,8 @@
 
 -answer history
 -what you answered wrong will be the other choices. For example if you said "ni hao" was "goodbye", then "goodbye" will be an option next time that question gets asked 
+
+-ability for user to download stats on what words they get wrong often
+
 -new words, then failed words organized by time, then correct words organized by time, then random words
 
