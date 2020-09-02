@@ -9,3 +9,4 @@
 
 -new words, then failed words organized by time, then correct words organized by time, then random words
 
+-endurance game with 1 minute per word with all hsk 1-6 vocab. each wrong word is minus 15 seconds
