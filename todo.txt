@@ -1,4 +1,8 @@
 -seperate keys on screen by which hand
+-change high score to words left and change time limit to 2:00 minutes. 0.8 seconds per vocab word is a perfect score
+-split hsk into 150 chunks. Levels 1 through 4 will be 8 levels
+
 -answer history
--new words, then failed words organized by time, then correct words organized by time, then random words
 -what you answered wrong will be the other choices. For example if you said "ni hao" was "goodbye", then "goodbye" will be an option next time that question gets asked 
+-new words, then failed words organized by time, then correct words organized by time, then random words
+
