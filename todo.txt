@@ -1,19 +1,22 @@
--split hsk into 50 chunks. Levels 1 through 4
+1.0 = Basic Game
+-split hsk into 50 chunks. Levels 1 through 4. 
 -50 words * 3 combinations * 4 seconds per question = 10 minute time limit
 -combo: (ab or ba) & (ac or ca) & (bc or cb)
 -change high score to words left
+-GAME WILL BE READY FOR PLAY AT THIS POINT
 
-GAME WILL BE READY FOR PLAY AT THIS POINT
-
+2.0 = Minor additions
+-word in sentence on failure
 -seperate keys on screen by which hand
 
--answer history
+3.0 = answer history
 -what you answered wrong will be the other choices. For example if you said "ni hao" was "goodbye", then "goodbye" will be an option next time that question gets asked 
-
--ability for user to download stats on what words they get wrong often
-
 -communication with server to combine commonly wrong words from other people online
 
--new words, then failed words organized by time, then correct words organized by time, then random words DELETE
+4.0 = vocal games
+-same game as before except player will have to transfer audio to pinyin, hanyu, or translation
 
--endurance game with 1 minute per word with all hsk 1-6 vocab. each wrong word is minus 15 seconds DELETE
+4.0 = spaced repetition
+-only one app 
+-some new words, then failed words organized by time, then correct words organized by time, then random words
+-hsk 1-6 vocab
