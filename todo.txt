@@ -2,11 +2,11 @@
 -split hsk into 50 chunks. Levels 1 through 4. 
 -50 words * 3 combinations * 4 seconds per question = 10 minute time limit
 -combo: (ab or ba) & (ac or ca) & (bc or cb)
--change high score to words left
+-words correct, words wrong, words left
 -GAME WILL BE READY FOR PLAY AT THIS POINT
 
 2.0 = Minor additions
--word in sentence on failure
+-download list of wrong words at end
 -seperate keys on screen by which hand
 
 3.0 = answer history
