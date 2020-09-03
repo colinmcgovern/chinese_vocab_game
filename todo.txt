@@ -1,5 +1,6 @@
 -split hsk into 50 chunks. Levels 1 through 4
 -50 words * 3 combinations * 4 seconds per question = 10 minute time limit
+-combo: (ab or ba) & (ac or ca) & (bc or cb)
 -change high score to words left
 
 GAME WILL BE READY FOR PLAY AT THIS POINT
