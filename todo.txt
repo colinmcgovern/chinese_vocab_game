@@ -2,11 +2,15 @@
 -change high score to words left and change time limit to 2:00 minutes. 0.8 seconds per vocab word is a perfect score
 -split hsk into 150 chunks. Levels 1 through 4 will be 8 levels
 
+Game will be ready this point
+
 -answer history
 -what you answered wrong will be the other choices. For example if you said "ni hao" was "goodbye", then "goodbye" will be an option next time that question gets asked 
 
 -ability for user to download stats on what words they get wrong often
 
--new words, then failed words organized by time, then correct words organized by time, then random words
+-communication with server to combine commonly wrong words from other people online
 
--endurance game with 1 minute per word with all hsk 1-6 vocab. each wrong word is minus 15 seconds
+-new words, then failed words organized by time, then correct words organized by time, then random words DELETE
+
+-endurance game with 1 minute per word with all hsk 1-6 vocab. each wrong word is minus 15 seconds DELETE
