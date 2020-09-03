@@ -1,8 +1,10 @@
--seperate keys on screen by which hand
--change high score to words left and change time limit to 2:00 minutes. 0.8 seconds per vocab word is a perfect score
--split hsk into 150 chunks. Levels 1 through 4 will be 8 levels
+-split hsk into 50 chunks. Levels 1 through 4
+-50 words * 3 combinations * 4 seconds per question = 10 minute time limit
+-change high score to words left
 
-Game will be ready this point
+GAME WILL BE READY FOR PLAY AT THIS POINT
+
+-seperate keys on screen by which hand
 
 -answer history
 -what you answered wrong will be the other choices. For example if you said "ni hao" was "goodbye", then "goodbye" will be an option next time that question gets asked 
