@@ -1,6 +1,9 @@
 var words_wrong_string = "";
 var words_correct_string = "";
 
+var words_wrong = new Array();
+var words_correct = new Array();
+
 translations = new Array();
 $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-vocab-json/hsk-level-1.json', function (data) {
 
@@ -18,14 +21,12 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		}
 	}
 
-	var words_wrong = new Array();
 	if(Cookies.get('words_wrong') != null){
-		words_wrong = JSON.parse(Cookies.get('words_wrong'));
+		words_wrong = JSON.parse(decodeURIComponent(Cookies.get('words_wrong')));
 	}
-
-	var words_correct = new Array();
+	
 	if(Cookies.get('words_correct') != null){
-		words_correct = JSON.parse(Cookies.get('words_correct'));
+		words_correct = JSON.parse(decodeURIComponent(Cookies.get('words_correct')));
 	}
 
 	words_wrong.forEach( item => {
