@@ -45,4 +45,4 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 	});
 	$("#dis_words_correct").text(words_correct_string);
 
-}
+});
