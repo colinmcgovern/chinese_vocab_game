@@ -1,3 +1,6 @@
+var words_wrong_string = "";
+var words_correct_string = "";
+
 translations = new Array();
 $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-vocab-json/hsk-level-1.json', function (data) {
 
@@ -25,7 +28,6 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		words_correct = JSON.parse(Cookies.get('words_correct'));
 	}
 
-	var words_wrong_string = "";
 	words_wrong.forEach( item => {
 		words_wrong_string.concat(id_type_to_text(item['id'],item['question']));
 		words_wrong_string.concat(' -> ');	
@@ -34,8 +36,6 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 
 	});
 	$("#dis_words_correct").text(words_wrong_string);
-
-	var words_correct_string = "";
 
 	words_correct.forEach( item => {
 		words_correct_string.concat(id_type_to_text(item['id'],item['question']));
