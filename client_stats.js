@@ -30,20 +30,18 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 	}
 
 	words_wrong.forEach( item => {
-		// words_wrong_string.concat(id_type_to_text(item['id'],item['question']));
-		// words_wrong_string.concat(' -> ');	
-		// words_wrong_string.concat(id_type_to_text(item['id'],item['answer']));
-		// words_wrong_string.concat('\n');
-		words_wrong_string.concat(item['id']);
+		words_wrong_string = words_wrong_string.concat(id_type_to_text(item['id'],item['question']));
+		words_wrong_string = words_wrong_string.concat(' -> ');	
+		words_wrong_string = words_wrong_string.concat(id_type_to_text(item['id'],item['answer']));
+		words_wrong_string = words_wrong_string.concat('\n');
 	});
 	$("#dis_words_correct").text(words_wrong_string);
 
 	words_correct.forEach( item => {
-		// words_correct_string.concat(id_type_to_text(item['id'],item['question']));
-		// words_correct_string.concat(' -> ');	
-		// words_correct_string.concat(id_type_to_text(item['id'],item['answer']));
-		// words_correct_string.concat('\n');
-		words_wrong_string.concat(item['id']);
+		words_correct_string = words_correct_string.concat(id_type_to_text(item['id'],item['question']));
+		words_correct_string = words_correct_string.concat(' -> ');	
+		words_correct_string = words_correct_string.concat(id_type_to_text(item['id'],item['answer']));
+		words_correct_string = words_correct_string.concat('\n');
 	});
 	$("#dis_words_correct").text(words_correct_string);
 
