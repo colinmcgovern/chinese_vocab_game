@@ -62,8 +62,8 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		Cookies.set('words_wrong', JSON.stringify(words_wrong));
 		Cookies.set('words_correct', JSON.stringify(words_correct));
 
-		Cookies.set('words_wrong_history', JSON.stringify(words_wrong));
-		Cookies.set('words_correct_history', JSON.stringify(words_correct));
+		Cookies.set('words_wrong_history', JSON.stringify(words_wrong_history.concat(words_wrong)));
+		Cookies.set('words_correct_history', JSON.stringify(words_correct_history.concat(words_correct)));
 
 		window.location.replace('stats.html');
 	}
