@@ -69,9 +69,9 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		console.log(chosen_words); //del
 	}
 
-	while(chosen_words.length < 8){
-		chosen_words.length 
-	}
+	// while(chosen_words.length < 8){
+	// 	chosen_words.length 
+	// }
 
 	words_wrong.forEach( item => {
 		words_wrong_string = words_wrong_string.concat(id_type_to_text(item['id'],item['question']));
