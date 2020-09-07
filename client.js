@@ -13,6 +13,8 @@ var words_correct = new Array();
 var words_wrong = new Array();
 var words_left = new Array();
 
+var chosen_words = new Array();
+
 var words_wrong_history = new Array();
 
 translations = new Array();
@@ -20,10 +22,38 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 
 	translations = data;
 
+
+
 	//Get wrong word history
 	if(Cookies.get('words_wrong_history') != null){
 		words_wrong_history = JSON.parse(decodeURIComponent(Cookies.get('words_wrong_history')));
-		console.log(words_wrong_history);
+		console.log("1"); //del
+		console.log(words_wrong_history); //del
+
+		var words_wrong_history_totals = new Array();
+
+		words_wrong_history.forEach(item => {
+			words_wrong_history_totals[item.id]++;
+		});
+
+		console.log("2"); //del
+		console.log(words_wrong_history_totals); //del
+
+		words_wrong_history_totals.sort(function(a, b) {
+    		return a - b;
+		});
+
+		console.log("3"); //del
+		console.log(words_wrong_history_totals); //del
+
+		Object.keys(words_wrong_history_totals).forEach(function(k){
+			if(words_chosen < 4 && words_wrong_history_totals[k]!=0){
+				words_chosen.push(k);
+			}
+		}
+
+		console.log("4"); //del
+		console.log(words_chosen); //del
 	}
 
 	//Slice size is 8!!
@@ -165,7 +195,8 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 	update_word();	
 	display = document.querySelector('#time');
 	//startTimer(translations.length*5*3, display);
-	startTimer(translations.length*1*3, display); //del
+	//startTimer(translations.length*1*3, display); //del
+	startTimer(5, display); //del
 
 	document.addEventListener('keydown', function(event) {
 
