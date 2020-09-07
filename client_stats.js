@@ -35,7 +35,7 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		words_wrong_string = words_wrong_string.concat(id_type_to_text(item['id'],item['answer']));
 		words_wrong_string = words_wrong_string.concat('<br>');
 	});
-	$("#dis_words_word").text(words_wrong_string);
+	$("#dis_words_wrong").text(words_wrong_string);
 
 	words_correct.forEach( item => {
 		words_correct_string = words_correct_string.concat(id_type_to_text(item['id'],item['question']));
