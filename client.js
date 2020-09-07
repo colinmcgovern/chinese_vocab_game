@@ -50,7 +50,7 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 			if(words_chosen < 4 && words_wrong_history_totals[k]!=0){
 				words_chosen.push(k);
 			}
-		}
+		});
 
 		console.log("4"); //del
 		console.log(words_chosen); //del
