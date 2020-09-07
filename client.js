@@ -13,6 +13,8 @@ var words_correct = new Array();
 var words_wrong = new Array();
 var words_left = new Array();
 
+var words_wrong_history = new Array();
+
 translations = new Array();
 $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-vocab-json/hsk-level-1.json', function (data) {
 
@@ -21,6 +23,7 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 	//Get wrong word history
 	if(Cookies.get('words_wrong_history') != null){
 		words_wrong_history = JSON.parse(decodeURIComponent(Cookies.get('words_wrong_history')));
+		console.log(words_wrong_history);
 	}
 
 	//Slice size is 8!!
