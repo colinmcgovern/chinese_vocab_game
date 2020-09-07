@@ -17,6 +17,13 @@ translations = new Array();
 $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-vocab-json/hsk-level-1.json', function (data) {
 
 	translations = data;
+
+	//Get wrong word history
+	if(Cookies.get('words_wrong') != null){
+		words_wrong = JSON.parse(decodeURIComponent(Cookies.get('words_wrong')));
+	}
+
+	//Slice size is 8!!
 	translations = translations.slice(0,8);
 
 	//Filling the words left array
