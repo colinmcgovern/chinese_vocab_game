@@ -22,8 +22,6 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 
 	translations = data;
 
-
-
 	//Get wrong word history
 	if(Cookies.get('words_wrong_history') != null){
 		words_wrong_history = JSON.parse(decodeURIComponent(Cookies.get('words_wrong_history')));

@@ -41,6 +41,10 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 
 		var words_wrong_history_totals = new Array();
 
+		translations.forEach(item => {
+			words_wrong_history_totals[item['id']] = 0;
+		});
+
 		words_wrong_history.forEach(item => {
 			words_wrong_history_totals[item['id']]++;
 		});
@@ -63,6 +67,10 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 
 		console.log("4"); //del
 		console.log(chosen_words); //del
+	}
+
+	while(chosen_words.length < 8){
+		chosen_words.length 
 	}
 
 	words_wrong.forEach( item => {
