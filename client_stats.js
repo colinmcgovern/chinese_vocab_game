@@ -77,7 +77,7 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 			random_word_index = Math.floor(Math.random()*translations.length);
 		}
 
-		chosen_words.push(translation[random_word_index]['id']);
+		chosen_words.push(translations[random_word_index]['id']);
 		
 	}
 
