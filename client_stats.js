@@ -33,6 +33,7 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		words_correct = JSON.parse(decodeURIComponent(Cookies.get('words_correct')));
 	}
 
+	//Choosing words
 	//Get wrong word history
 	if(Cookies.get('words_wrong_history') != null){
 		words_wrong_history = JSON.parse(decodeURIComponent(Cookies.get('words_wrong_history')));
@@ -53,7 +54,7 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		console.log(words_wrong_history_totals); //del
 
 		words_wrong_history_totals.sort(function(a, b) {
-    		return a - b;
+    		return b - a;
 		});
 
 		console.log("3"); //del
@@ -69,9 +70,20 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		console.log(chosen_words); //del
 	}
 
-	// while(chosen_words.length < 8){
-	// 	chosen_words.length 
-	// }
+	while(chosen_words.length < 8){
+
+		random_word_index = Math.floor(Math.random()*translations.length);
+		while(chosen_words.includes(random_word_index)){
+			random_word_index = Math.floor(Math.random()*translations.length);
+		}
+
+		chosen_words.push(translation[random_word_index]['id']);
+		
+	}
+
+	console.log("5"); //del
+	console.log(chosen_words); //del
+	//Choosing words
 
 	words_wrong.forEach( item => {
 		words_wrong_string = words_wrong_string.concat(id_type_to_text(item['id'],item['question']));
