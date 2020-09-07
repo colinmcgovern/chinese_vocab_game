@@ -4,6 +4,9 @@
 -combo: (ab or ba) & (ac or ca) & (bc or cb)
 -words correct, words wrong, words left
 -see words you got wrong and stats after game
+
+//here and forward
+-History
 -words are half your worst words and half random words 
 -sometimes there are dup words...
 
