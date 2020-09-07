@@ -6,7 +6,7 @@
 -see words you got wrong and stats after game
 
 //here and forward
--History
+-History -> see "chosen words in stats_client.js
 -words are half your worst words and half random words 
 -sometimes there are dup words...
 
