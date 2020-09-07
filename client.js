@@ -47,13 +47,13 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		console.log(words_wrong_history_totals); //del
 
 		Object.keys(words_wrong_history_totals).forEach(function(k){
-			if(words_chosen < 4 && words_wrong_history_totals[k]!=0){
-				words_chosen.push(k);
+			if(chosen_words < 4 && words_wrong_history_totals[k]!=0){
+				chosen_words.push(k);
 			}
 		});
 
 		console.log("4"); //del
-		console.log(words_chosen); //del
+		console.log(chosen_words); //del
 	}
 
 	//Slice size is 8!!
