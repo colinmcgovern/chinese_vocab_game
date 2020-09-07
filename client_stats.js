@@ -29,6 +29,38 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		words_correct = JSON.parse(decodeURIComponent(Cookies.get('words_correct')));
 	}
 
+	//Get wrong word history
+	if(Cookies.get('words_wrong_history') != null){
+		words_wrong_history = JSON.parse(decodeURIComponent(Cookies.get('words_wrong_history')));
+		console.log("1"); //del
+		console.log(words_wrong_history); //del
+
+		var words_wrong_history_totals = new Array();
+
+		words_wrong_history.forEach(item => {
+			words_wrong_history_totals[item.id]++;
+		});
+
+		console.log("2"); //del
+		console.log(words_wrong_history_totals); //del
+
+		words_wrong_history_totals.sort(function(a, b) {
+    		return a - b;
+		});
+
+		console.log("3"); //del
+		console.log(words_wrong_history_totals); //del
+
+		Object.keys(words_wrong_history_totals).forEach(function(k){
+			if(chosen_words < 4 && words_wrong_history_totals[k]!=0){
+				chosen_words.push(k);
+			}
+		});
+
+		console.log("4"); //del
+		console.log(chosen_words); //del
+	}
+
 	words_wrong.forEach( item => {
 		words_wrong_string = words_wrong_string.concat(id_type_to_text(item['id'],item['question']));
 		words_wrong_string = words_wrong_string.concat(' -> ');	
