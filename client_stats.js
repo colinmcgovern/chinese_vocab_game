@@ -10,7 +10,7 @@ var words_correct = new Array();
 
 var chosen_words = new Array();
 
-var words_wrong_history = new Array();
+var words_wrong_history = new Map();
 
 translations = new Array();
 $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-vocab-json/hsk-level-1.json', function (data) {
@@ -58,17 +58,17 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		print("words_wrong_history"); //del
 		print(words_wrong_history); //del
 
-		var words_wrong_history_totals = new Array();
+		var words_wrong_history_totals = new Map();
 
 		translations.forEach(item => {
-			words_wrong_history_totals{item['id']} = 0;
+			words_wrong_history_totals.set(item['id'],0);
 		});
 
 		print("words_wrong_history_totals when empty"); //del
 		print(words_wrong_history_totals); //del
 
 		words_wrong_history.forEach(item => {
-			words_wrong_history_totals{item['id']}++;
+			words_wrong_history_totals.set(item['id'], words_wrong_history_totals.get(item['id'])++ );
 		});
 
 		print("words_wrong_history_totals"); //del
@@ -82,7 +82,7 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		print(words_wrong_history_totals); //del
 
 		Object.keys(words_wrong_history_totals).forEach(function(k){
-			if(chosen_words.length < 4 && words_wrong_history_totals{k}!=0){
+			if(chosen_words.length < 4 && words_wrong_history_totals[k]!=0){
 				chosen_words.push(k);
 			}
 		});
