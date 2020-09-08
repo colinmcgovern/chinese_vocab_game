@@ -1,3 +1,7 @@
+function print(v){
+	console.log(JSON.parse(JSON.stringify(v)));
+}
+
 var words_wrong_string = "";
 var words_correct_string = "";
 
@@ -48,8 +52,8 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 			return v != null;
 		});
 
-		console.log("words_wrong_history"); //del
-		console.log(words_wrong_history); //del
+		print("words_wrong_history"); //del
+		print(words_wrong_history); //del
 
 		var words_wrong_history_totals = new Array();
 
@@ -57,22 +61,22 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 			words_wrong_history_totals[item['id'].toString()] = 0;
 		});
 
-		console.log("words_wrong_history_totals when empty"); //del
-		console.log(words_wrong_history_totals); //del
+		print("words_wrong_history_totals when empty"); //del
+		print(words_wrong_history_totals); //del
 
 		words_wrong_history.forEach(item => {
 			words_wrong_history_totals[item['id'].toString()]++;
 		});
 
-		console.log("words_wrong_history_totals"); //del
-		console.log(words_wrong_history_totals); //del
+		print("words_wrong_history_totals"); //del
+		print(words_wrong_history_totals); //del
 
 		words_wrong_history_totals.sort(function(a, b) {
     		return b - a;
 		});
 
-		console.log("words_wrong_history_totals sorted"); //del
-		console.log(words_wrong_history_totals); //del
+		print("words_wrong_history_totals sorted"); //del
+		print(words_wrong_history_totals); //del
 
 		Object.keys(words_wrong_history_totals).forEach(function(k){
 			if(chosen_words < 4 && words_wrong_history_totals[k]!=0){
@@ -80,8 +84,8 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 			}
 		});
 
-		console.log("chosen_words before random"); //del
-		console.log(chosen_words); //del
+		print("chosen_words before random"); //del
+		print(chosen_words); //del
 	}
 
 	while(chosen_words.length < 8){
@@ -95,8 +99,8 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		
 	}
 
-	console.log("chosen_words"); //del
-	console.log(chosen_words); //del
+	print("chosen_words"); //del
+	print(chosen_words); //del
 	//Choosing words
 
 	words_wrong.forEach( item => {
