@@ -152,6 +152,10 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 
 	function update_word(){
 
+		if(words_left.length<=0){
+			game_over();
+		}
+
 		$("#dis_words_correct").text(words_correct.length);
 		$("#dis_words_wrong").text(words_wrong.length);
 		$("#dis_words_left").text(words_left.length);
