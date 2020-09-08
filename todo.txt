@@ -14,8 +14,10 @@
 -"perfected words" list this allows user to "pass" the game
 
 Future
+-show users words to review before test
 -seperate keys on screen by which hand
 -hsk 2-4 vocab
 -what you answered wrong will be the other choices. For example if you said "ni hao" was "goodbye", then "goodbye" will be an option next time that question gets asked 
 -communication with server to combine commonly wrong words from other people online
 -same game as before except player will have to transfer audio to pinyin, hanyu, or translation
+-add words in sentances as part of review
