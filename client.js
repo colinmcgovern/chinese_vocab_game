@@ -196,9 +196,9 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 
 	update_word();	
 	display = document.querySelector('#time');
-	//startTimer(translations.length*5*3, display);
+	startTimer(translations.length*5*3, display);
 	//startTimer(translations.length*1*3, display); //del
-	startTimer(5, display); //del
+	// startTimer(5, display); //del
 
 	document.addEventListener('keydown', function(event) {
 
