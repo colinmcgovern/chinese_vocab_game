@@ -57,6 +57,9 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 			words_wrong_history_totals[item['id'].toString()] = 0;
 		});
 
+		console.log("words_wrong_history_totals when empty"); //del
+		console.log(words_wrong_history_totals); //del
+
 		words_wrong_history.forEach(item => {
 			words_wrong_history_totals[item['id'].toString()]++;
 		});
