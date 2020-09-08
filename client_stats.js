@@ -37,27 +37,27 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 	//Get wrong word history
 	if(Cookies.get('words_wrong_history') != null){
 		words_wrong_history = JSON.parse(decodeURIComponent(Cookies.get('words_wrong_history')));
-		console.log("1"); //del
+		console.log("words_wrong_history"); //del
 		console.log(words_wrong_history); //del
 
 		var words_wrong_history_totals = new Array();
 
 		translations.forEach(item => {
-			words_wrong_history_totals[item['id']] = 0;
+			words_wrong_history_totals[item['id'].toString()] = 0;
 		});
 
 		words_wrong_history.forEach(item => {
-			words_wrong_history_totals[item['id']]++;
+			words_wrong_history_totals[item['id'].toString()]++;
 		});
 
-		console.log("2"); //del
+		console.log("words_wrong_history_totals"); //del
 		console.log(words_wrong_history_totals); //del
 
 		words_wrong_history_totals.sort(function(a, b) {
     		return b - a;
 		});
 
-		console.log("3"); //del
+		console.log("words_wrong_history_totals sorted"); //del
 		console.log(words_wrong_history_totals); //del
 
 		Object.keys(words_wrong_history_totals).forEach(function(k){
@@ -66,7 +66,7 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 			}
 		});
 
-		console.log("4"); //del
+		console.log("chosen_words before random"); //del
 		console.log(chosen_words); //del
 	}
 
@@ -81,7 +81,7 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		
 	}
 
-	console.log("5"); //del
+	console.log("chosen_words"); //del
 	console.log(chosen_words); //del
 	//Choosing words
 
