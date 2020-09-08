@@ -16,6 +16,9 @@ translations = new Array();
 $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-vocab-json/hsk-level-1.json', function (data) {
 
 	translations = data;
+	translations = translations.filter(function (v) {
+		return v != null;
+	});
 
 	function id_type_to_text(id, type){
 		if(type=='hanzi'){
