@@ -8,7 +8,8 @@
 //here and forward
 -History -> see "chosen words in stats_client.js
 -words are half your worst words and half random words 
--sometimes there are dup words...
+-sometimes there are dup words
+-end game when out of words
 
 Future
 -"perfected words" list this allows user to "pass" the game

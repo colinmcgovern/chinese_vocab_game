@@ -36,7 +36,12 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 	//Choosing words
 	//Get wrong word history
 	if(Cookies.get('words_wrong_history') != null){
+		
 		words_wrong_history = JSON.parse(decodeURIComponent(Cookies.get('words_wrong_history')));
+		words_wrong_history = words_wrong_history.filter(function (v) {
+			return v != null;
+		});
+
 		console.log("words_wrong_history"); //del
 		console.log(words_wrong_history); //del
 
