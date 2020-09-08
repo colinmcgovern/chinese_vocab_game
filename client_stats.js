@@ -58,14 +58,14 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		var words_wrong_history_totals = new Array();
 
 		translations.forEach(item => {
-			words_wrong_history_totals[item['id'].toString()] = 0;
+			words_wrong_history_totals[item['id']] = 0;
 		});
 
 		print("words_wrong_history_totals when empty"); //del
 		print(words_wrong_history_totals); //del
 
 		words_wrong_history.forEach(item => {
-			words_wrong_history_totals[item['id'].toString()]++;
+			words_wrong_history_totals[item['id']]++;
 		});
 
 		print("words_wrong_history_totals"); //del
@@ -79,7 +79,7 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		print(words_wrong_history_totals); //del
 
 		Object.keys(words_wrong_history_totals).forEach(function(k){
-			if(chosen_words < 4 && words_wrong_history_totals[k]!=0){
+			if(chosen_words.length < 4 && words_wrong_history_totals[k]!=0){
 				chosen_words.push(k);
 			}
 		});
