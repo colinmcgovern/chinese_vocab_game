@@ -11,8 +11,9 @@
 -sometimes there are dup words
 -end game when out of words
 
-Future
 -"perfected words" list this allows user to "pass" the game
+
+Future
 -seperate keys on screen by which hand
 -hsk 2-4 vocab
 -what you answered wrong will be the other choices. For example if you said "ni hao" was "goodbye", then "goodbye" will be an option next time that question gets asked 

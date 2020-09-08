@@ -54,11 +54,11 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 		var words_wrong_history_totals = new Array();
 
 		translations.forEach(item => {
-			words_wrong_history_totals[item['id']] = 0;
+			words_wrong_history_totals[item['id'].toString()] = 0;
 		});
 
 		words_wrong_history.forEach(item => {
-			words_wrong_history_totals[item['id']]++;
+			words_wrong_history_totals[item['id'].toString()]++;
 		});
 
 		console.log("words_wrong_history_totals"); //del
