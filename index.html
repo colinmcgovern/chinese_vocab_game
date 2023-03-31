@@ -1,6 +1,7 @@
 <head>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<meta charset="utf-8">
 </head>
 
 <style>
@@ -13,6 +14,7 @@
 	  background-repeat: repeat;
 	  image-rendering: pixelated;
 	  background-size: 256px 256px;
+	  
 	}
 
 	.main {
@@ -27,20 +29,56 @@
 	    border-radius: 50px;
 
 	    background-color: rgba(255, 255, 255, .9);
+
+	    width: 500px;
+	    text-align: center;
+
 	}
+
+	form{
+	    text-align: center;
+	}
+
 </style>
 
 <body>
 	<div class="main">
-		<br><br>
-		Time left: <span id="time">Empty</span><br>
-		Word Correct: <span id="dis_words_correct">Empty</span><br>
-		Words Wrong: <span id="dis_words_wrong">Empty</span><br>
-		Words Left: <span id="dis_words_left">Empty</span><br>
+		<h1>Mandarin Fast Translation</h1>
+		Use the home row of keys ("asdfjkl;") to choose the correct translation as fast as you can.
+		<h2>GAME SETUP</h2>
+		<form action="./game.html" method="get">
+			HSK Level?
+			<select name="level" id="level">
+				<option value="1">1  (*μ_μ)</option>
+				<option value="2">2  (；⌣̀_⌣́)</option>
+				<option value="3">3  ٩(ఠ益ఠ)۶</option>
+				<option value="4">4  ┐(˘ ､ ˘)┌</option>
+				<option value="5">5  (ᵔ◡ᵔ)</option>
+				<option value="6">6  (°ロ°)!</option>
+			</select>
 
-		<canvas id="myCanvas" width="960" height="540"></canvas>
+			<br>
+			<br>
+
+			Time Limit?
+			<select name="time" id="time">
+				<option value="15">15s</option>
+				<option value="30">30s</option>
+				<option value="45">45s</option>
+				<option value="60">60s</option>
+				<option value="90">90s</option>
+				<option value="120">120s</option>
+			</select>
+
+			<br>
+			<br>
+
+			<input type="submit" value="Submit">
+
+			<br>
+			<br>
+
+		</form>
 	</div>
 	
 </body>
-
-<script src="client.js"></script>

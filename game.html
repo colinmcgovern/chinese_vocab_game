@@ -1,7 +1,6 @@
 <head>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-<meta charset="utf-8">
 </head>
 
 <style>
@@ -14,7 +13,6 @@
 	  background-repeat: repeat;
 	  image-rendering: pixelated;
 	  background-size: 256px 256px;
-	  
 	}
 
 	.main {
@@ -29,27 +27,20 @@
 	    border-radius: 50px;
 
 	    background-color: rgba(255, 255, 255, .9);
-
-	    width: 500px;
-	    text-align: center;
 	}
-
-	form{
-	    text-align: center;
-	}
-
 </style>
 
 <body>
 	<div class="main">
-		
-			<h1>GAME OVER!</h1>
-			Words Wrong:<br> <span id="dis_words_wrong">Empty</span><br>
-			Words Correct:<br> <span id="dis_words_correct">Empty</span><br>
-			<br>
-			<a href="index.html">Play Again</a>
-			<br><br>
+		<br><br>
+		Time left: <span id="time">Empty</span><br>
+		Word Correct: <span id="dis_words_correct">Empty</span><br>
+		Words Wrong: <span id="dis_words_wrong">Empty</span><br>
+		Words Left: <span id="dis_words_left">Empty</span><br>
+
+		<canvas id="myCanvas" width="960" height="540"></canvas>
 	</div>
+	
 </body>
 
-<script src="client_stats.js"></script>
+<script src="./game.js"></script>
