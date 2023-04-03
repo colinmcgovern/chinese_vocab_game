@@ -6,7 +6,7 @@
 
 <style>
 	body {
-	  color: white;
+	  color: black;
 	  font-family: Arial, Helvetica, sans-serif;
 	  margin:    0 auto;
 	  max-width: 900px;
@@ -32,10 +32,21 @@
 
 	    width: 500px;
 	    text-align: center;
+
+	    padding:1em;
 	}
 
 	form{
 	    text-align: center;
+	}
+
+	table{
+		width:100%;
+		border-collapse: collapse;
+	}
+
+	table, th, td {
+		border: 1px solid;
 	}
 
 </style>
@@ -44,12 +55,12 @@
 	<div class="main">
 		
 			<h1>GAME OVER!</h1>
-			Words Wrong:<br> <span id="dis_words_wrong">Empty</span><br>
-			Words Correct:<br> <span id="dis_words_correct">Empty</span><br>
+			Words Wrong:<br> <span id="dis_words_wrong">Loading...</span><br>
+			Words Correct:<br> <span id="dis_words_correct">Loading...</span><br>
 			<br>
 			<a href="index.html">Play Again</a>
 			<br><br>
 	</div>
 </body>
 
-<script src="client_stats.js"></script>
+<script src="stats.js"></script>

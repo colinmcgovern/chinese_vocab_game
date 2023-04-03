@@ -38,25 +38,27 @@ $.getJSON('https://raw.githubusercontent.com/clem109/hsk-vocabulary/master/hsk-v
 
 	console.log(words_wrong)
 
-	var wrong_string = ""
+	var wrong_string = "<table><tr><th>Hanzi</th><th>Pinyin</th><th>Translation</th></tr>"
 	words_wrong.forEach(x =>
-		wrong_string = wrong_string + 
-		id_type_to_text(Number(x),'hanzi') + " " + 
-		id_type_to_text(Number(x),'pinyin') + " " +
-		id_type_to_text(Number(x),'translations') + "<br>"
+		wrong_string = wrong_string +
+		"<tr><td>" + 
+		id_type_to_text(Number(x),'hanzi') + "</td><td>" + 
+		id_type_to_text(Number(x),'pinyin') + "</td><td>" +
+		id_type_to_text(Number(x),'translation') + "</td></tr>"
 	)
 
-	var correct_string = ""
+	var correct_string = "<table><tr><th>Hanzi</th><th>Pinyin</th><th>Translation</th></tr>"
 	words_correct.forEach(x =>
-		wrong_string = wrong_string + 
-		id_type_to_text(x,'hanzi') + " " + 
-		id_type_to_text(x,'pinyin') + " " +
-		id_type_to_text(x,'translations') + "<br>"
+		correct_string = correct_string + 
+		"<tr><td>" + 
+		id_type_to_text(Number(x),'hanzi') + "</td><td>" + 
+		id_type_to_text(Number(x),'pinyin') + "</td><td>" +
+		id_type_to_text(Number(x),'translation') + "</td></tr>"
 	)
 
 
-	$("#dis_words_wrong").text(wrong_string);
-	$("#dis_words_correct").text(correct_string);
+	$("#dis_words_wrong").html(wrong_string);
+	$("#dis_words_correct").html(correct_string);
 
 }).error(function(){
 	console.log('error: json not loaded');
